@@ -84,7 +84,7 @@ def names_dirs(path):
     """
     ans = list()
     for name in os.listdir(path):
-        full_path = u_str.get_path(path,name)
+        full_path = '\\'.join([path,name])
         if os.path.isdir(full_path):
             ans.append(full_path)
     return ans
@@ -177,4 +177,4 @@ def tester():
     tester_names_dirs()
     print('====================\nEnd Tester\n====================')        
     
-tester() 
+#tester() 

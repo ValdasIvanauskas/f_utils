@@ -17,7 +17,29 @@ def sublist_by_index(li, indices, index_start=0):
         index -= index_start
         sub.append(li[index])
     return sub
-    
+
+
+def bigram(li):
+    """
+    ===========================================================================
+     Description: Convert List into List of Tuples (BiGram method).
+    ---------------------------------------------------------------------------
+        1. list('abc') => [ tuple('ab'), tuple('bc') ]
+    ===========================================================================
+     Arguments:
+    ---------------------------------------------------------------------------
+        1. li : list. 
+    ===========================================================================
+     Return: list of tuple (List of Tuples in BiGram method).
+    ===========================================================================
+    """
+    tuples = list()
+    if len(li)<2:
+        return tuples
+    for i in range(len(li)-1):
+        tuples.append((li[i],li[i+1]))
+    return tuples            
+
     
 """
 ===============================================================================
@@ -47,10 +69,22 @@ def tester():
         p2 = li_test == li_true
         
         u_tester.run([p1,p2])
-            
-    
-    print('\n====================\nStart Tester\n====================')    
+        
+        
+    def tester_bigram():
+        
+        li = list('abc')
+        bigram_test = bigram(li)
+        bigram_true = [ tuple('ab'), tuple('bc') ]
+         
+        p0 = bigram_test == bigram_true
+        
+        u_tester.run([p0])
+        
+        
+    u_tester.print_start(__file__)
     tester_sublist_by_index()
-    print('====================\nEnd Tester\n====================')            
+    tester_bigram()
+    u_tester.print_finish(__file__)            
     
 #tester()            
