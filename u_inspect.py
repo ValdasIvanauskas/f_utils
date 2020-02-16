@@ -11,5 +11,3 @@ def called_method():
     return inspect.stack()[2].function
 
 
-print(inspect.stack()[1].function)
-

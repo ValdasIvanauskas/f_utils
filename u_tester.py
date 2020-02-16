@@ -35,7 +35,7 @@ def print_start(path_module):
     ===========================================================================
     """
     name = path_module.split('\\')[-1].split('.')[0]
-    print('\n{0}\nStart Tester: {1}\n{0}'.format('='*30,name))
+    print('\n{0}\nStart Tester: {1}\n{0}'.format('='*50,name))
 
 
 def print_finish(path_module):
@@ -49,7 +49,7 @@ def print_finish(path_module):
     ===========================================================================
     """
     name = path_module.split('\\')[-1].split('.')[0]
-    print('{0}\nFinish Tester: {1}\n{0}'.format('='*30,name))
+    print('{0}\nFinish Tester: {1}\n{0}'.format('='*50,name))
     
     
 """
@@ -70,6 +70,3 @@ def tester():
     print('====================\nEnd Tester\n====================')            
     
 #tester()
-        
-#print_start('stam')
-#print_finish('stam')
